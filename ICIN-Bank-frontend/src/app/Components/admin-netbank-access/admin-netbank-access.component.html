@@ -1,0 +1,30 @@
+<div class="col d-flex justify-content-center">
+    <div class="card">
+        <div class="card-body">
+            <table class="table" id="accounts">
+                <tr class="table-active">
+                    <th scope="col" class="border-right">Account Number</th>
+                    <th scope="col">Account Holder Name</th>
+                    <th scope="col">Account CIF Number</th>
+                    <th scope="col">Account Branch</th>
+                    <th scope="col">Net Banking Registration Status</th>
+                    <th scope="col">Primary Account Balance</th>
+                    <th scope="col">Savings Account Balance</th>
+                    <th scope="col">Operation</th>
+                </tr>
+                <tr *ngFor="let accounts of toShowAccounts">
+                    <td scope="row" class="border-right">{{accounts['accountNumber']}}</td>
+                    <td>{{accounts['accountHolderName']}}</td>
+                    <td>{{accounts['accountCIFNumber']}}</td>
+                    <td>{{accounts['accountBranch']}}</td>
+                    <td>{{accounts['accountIsNetBankingReg']}}</td>
+                    <td>{{accounts['accountBalancePrimary']}}</td>
+                    <td>{{accounts['accountBalanceSavings']}}</td>
+                    <td>
+                        <button (click)="enableNetBanking(status,accounts['accountNumber'])" class="bg-danger btn btn-danger">Enable net banking for this user</button>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>  
+</div>

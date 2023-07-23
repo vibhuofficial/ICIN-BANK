@@ -1,0 +1,23 @@
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #4ba0dd;">
+        <span class="navbar-brand">Admin Portal</span>
+        <ul class="navbar-nav ms-auto">
+			<li class="nav-item">
+				<button class="btn btn-danger" (click)="onLogout()">Logout</button>
+			</li>
+        </ul>
+    </nav><br><br><br>
+    <div class="container">
+        <div class="card" style="width: 25rem;">
+            <img class="card-img top" src="https://plus.unsplash.com/premium_photo-1671306963320-c368eacbd44f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8YmFua3xlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60">
+            <div class="card-body">
+                <div class="btn btn-primary btn-login" routerLink="/admin-cheque">Approve cheque book requests</div><br><br>
+                <div class="btn btn-primary btn-login" routerLink="/admin-transact">Approve transactions</div><br><br>
+                <div class="btn btn-primary btn-login" routerLink="/admin-manage-accounts">Manage blocked accounts</div><br><br>
+                <div class="btn btn-primary btn-login" routerLink="/admin-netbank-access">Enable net banking</div><br><br>
+                <div class="btn btn-primary btn-login" routerLink="/admin-threat">Block threat accounts</div><br><br>
+            </div>
+        </div>
+    </div>
+</body>
+

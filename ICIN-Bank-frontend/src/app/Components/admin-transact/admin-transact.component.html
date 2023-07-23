@@ -1,0 +1,28 @@
+<div class="container">
+    <div class="card">
+        <table class="table table-bordered" id="transact">
+            <tr class="table-active">
+                <th scope="col" class="border-right">Serial #</th>
+                <th scope="col">Transfer From Account Number</th>
+                <th scope="col">Transfer From Account Type</th>
+                <th scope="col">Transfer To Account Number</th>
+                <th scope="col">Transfer To Account Type</th>
+                <th scope="col">Transfer Amount</th>
+                <th scope="col">Transfer Date</th>
+                <th scope="col">Operation</th>
+            </tr>
+            <tr *ngFor="let transaction of toShowTransactions">
+                <td scope="row" class="border-right">{{transaction['id']}}</td>
+                <td>{{transaction['fromAccountNumber']}}</td>
+                <td>{{transaction['fromAccountType']}}</td>
+                <td>{{transaction['toAccountNumber']}}</td>
+                <td>{{transaction['toAccountType']}}</td>
+                <td>{{transaction['transferAmount']}}</td>
+                <td>{{transaction['transferDate']}}</td>
+                <td>
+                    <button (click)="approveTransaction(transaction['id'])" class="bg-danger btn btn-sucess">Approve transaction</button>
+                </td>
+            </tr>
+        </table>
+    </div>  
+</div>

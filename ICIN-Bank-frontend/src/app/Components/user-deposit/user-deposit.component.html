@@ -1,0 +1,41 @@
+<div class="container">
+    <div class="card">
+        <form action="">
+            <div class="col-md-12 col-lg-12 ml-auto">
+                <small>Account Number</small>
+                <input [(ngModel)]="depositAccountNumber" id="accountNumber" type="text"
+                                name="accountNumber" placeholder="Confirm your account number to deposit money"
+                                class="form-control bg-white border-left-0 border-md" required>
+                <div>
+                        <label class="form-check-label" for="primary">
+                            Primary <small>(Balance: ₹ {{primaryBalance}}/-)</small>
+                        </label>
+                    </div>
+
+                    <input [(ngModel)]="primaryDepositAmount" id="primaryDepositAmount" type="number" name="primaryDepositAmount"
+                                placeholder="Enter amount to be deposited" class="form-control bg-white border-left-0 border-md"
+                                required>
+
+                    <div class="input-group">
+                        <a class="btn btn-success btn-block py-2" (click)="depositMoneytoPrimary()">
+                            <span class="font-weight-bold text-white">Deposit money to Primary Account</span>
+                        </a>
+                    </div>
+    
+                    <div class="form-check">
+                        <label class="form-check-label" for="savings">
+                            Savings <small>(Balance: ₹ {{savingsBalance}}/-)</small>
+                        </label>
+                    </div>
+                </div>
+                <input [(ngModel)]="savingsDepositAmount" id="savingsDepositAmount" type="number" name="savingsDepositAmount"
+                                placeholder="Enter amount to be deposited" class="form-control bg-white border-left-0 border-md"
+                                required>
+    
+                <div class="input-group">
+                    <a class="btn btn-success btn-block py-2" (click)="depositMoneytoSavings()">
+                        <span class="font-weight-bold text-white">Deposit money to Savings Account</span>
+                    </a>
+                </div>
+        <div>
+        </div>

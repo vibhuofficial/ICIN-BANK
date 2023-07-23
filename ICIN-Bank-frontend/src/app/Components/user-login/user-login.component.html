@@ -1,0 +1,39 @@
+<body>
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-9 col-md-7 col-lg-5 mx-auto">
+          <div class="card border-0 shadow rounded-3 my-5">
+            <div class="card-body p-4 p-sm-5">
+              <h5 class="card-title text-center mb-5 fw-light fs-5">Sign In</h5>
+              <form>
+                <div class="form-floating mb-3">
+                    <input [(ngModel)]="loginUserId" id="loginUserId" type="text" name="loginUserId" placeholder="User Login Id"
+                    class="form-control bg-white border-left-0 border-md" required>
+                  <label for="floatingInput">User ID</label>
+                </div>
+                <div class="form-floating mb-3">
+                    <input [(ngModel)]="loginUserPassword" id="loginUserPassword" type="password" name="loginUserPassword" placeholder="Login Password"
+                    class="form-control bg-white border-left-0 border-md" required>
+                  <label for="floatingPassword">Password</label>
+                </div>
+  
+                <div class="d-grid">
+                  <button (click)="loginUser()" class="btn btn-primary btn-login text-uppercase fw-bold" type="submit">Sign
+                    in</button>
+                </div>
+                <hr class="my-4">
+                <div class="d-grid mb-2">
+                    <p class="text-muted font-weight-bold">Not a Registered User?</p><br>
+                  <button class="btn btn-google btn-login text-uppercase fw-bold" routerLink="/registration">
+                    <i class="fab fa-google me-2"></i> Click here to sign up
+                  </button><br>
+                  <a routerLink="admin">Administrator Login</a>
+                  <a routerLink="user-account-create">Click here to create account</a>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>

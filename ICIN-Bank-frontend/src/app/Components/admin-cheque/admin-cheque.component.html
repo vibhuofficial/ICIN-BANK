@@ -1,0 +1,23 @@
+<div class="container">
+    <div class="card">
+        <img src="https://www.shutterstock.com/image-vector/check-chequebook-template-lines-pattern-600w-2190926369.jpg" alt="Cheque Book Image" height="250px">
+        <table class="table table-bordered" id="cheques">
+            <tr class="table-active">
+                <th scope="col" class="border-right">Cheque Book Number</th>
+                <th scope="col">Account Number</th>
+                <th scope="col">Account Type</th>
+                <th scope="col">Cheque Book Issue Date</th>
+                <th scope="col">Operation</th>
+            </tr>
+            <tr *ngFor="let chequeBook of toShowChequeBooks">
+                <td scope="row" class="border-right">{{chequeBook['chequeBookNumber']}}</td>
+                <td>{{chequeBook['accountNumber']}}</td>
+                <td>{{chequeBook['accountType']}}</td>
+                <td>{{generateDate(chequeBook['chequeBookIssueDate'])}}</td>
+                <td>
+                    <span class="btn btn-danger bg-danger text-center" (click)="allow(chequeBook['chequeBookNumber'])">Approve cheque book request</span>
+                </td>
+            </tr>
+        </table>
+    </div>  
+</div>

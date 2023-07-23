@@ -1,0 +1,31 @@
+<body>
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-9 col-md-7 col-lg-5 mx-auto">
+          <div class="card border-0 shadow rounded-3 my-5">
+            <div class="card-body p-4 p-sm-5">
+              <h5 class="card-title text-center mb-5 fw-light fs-5"> Administrator Portal</h5>
+              <form>
+                <div class="form-floating mb-3">
+                    <input [(ngModel)]="adminUsername" id="adminUsername" type="text" name="adminUsername" placeholder="Admin User Name"
+                            class="form-control bg-white border-left-0 border-md" required>
+                  <label for="floatingInput">User ID</label>
+                </div>
+                <div class="form-floating mb-3">
+                    <input [(ngModel)]="adminPassword" id="adminPassword" type="password" name="adminPassword" placeholder="Admin Password"
+                            class="form-control bg-white border-left-0 border-md" required>
+                  <label for="floatingPassword">Password</label>
+                </div>
+  
+                <div class="d-grid">
+                    <a (click)="loginAdmin()" class="btn btn-primary btn-block py-2">
+                        <span class="font-weight-bold text-white">Login</span>
+                    </a>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>

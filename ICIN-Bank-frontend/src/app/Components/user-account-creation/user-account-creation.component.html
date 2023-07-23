@@ -1,0 +1,69 @@
+<div class="container">
+    <div class="col-md-7 col-lg-6 ml-auto">
+        <form>
+            <div class="row">
+                <div class="form">
+                    <h1 class="display-4">Create your account here</h1>
+                </div>
+                <div class="form-floating mb-3">
+                    <input [(ngModel)]="accountNumber" id="accountNumber" type="text" name="accountNumber" placeholder="Enter any 9 digit account number of your choice" class="form-control bg-white border-left-0 border-md" required>
+                    <label for="firstname">Account Number</label>
+                </div>
+    
+                <div class="form-floating mb-3">
+                    <input [(ngModel)]="accountHolderName" id="accountHolderName" type="text" name="accountHolderName" placeholder="Enter your name"
+                        class="form-control bg-white border-left-0 border-md" required>
+                        <label for="lastname">Enter your full name</label>
+                </div>
+    
+                <div class="form-floating mb-3">
+                    <input [(ngModel)]="accountBranch" id="accountBranch" type="text" name="accountBranch" placeholder="Enter a branch of your choice"
+                        class="form-control bg-white border-left-0 border-md" required>
+                        <label for="accountNumber">Choose your home branch: Rajajinagar, Jayanagar or Girinagar</label>
+                </div>
+    
+                <div class="form-floating mb-3">
+                    <input value="{{accountCIFNumber}}" id="accountCIFNumber" type="text" name="accountCIFNumber" placeholder="accountCIFNumber" readonly
+                        class="form-control bg-white border-left-0 border-md">
+                </div>
+    
+                <div class="form-group col-lg-12 mb-0" (click)="getCifNumber()">
+                    <a class="btn btn-success btn-block py-2">
+                        <span class="font-weight-bold text-white">Click to get CIF number for your chosen branch</span><br>
+                    </a>
+                </div><br>
+    
+                <div class="form-floating mb-3">
+                    <a class="btn btn-success btn-block py-2">
+                        <span class="font-weight-bold text-white">Initial balance in your primary account: {{accountBalancePrimary}}</span><br>
+                    </a>
+                </div>
+    
+                <div class="form-floating mb-3">
+                    <a class="btn btn-success btn-block py-2">
+                        <span class="font-weight-bold text-white">Initial balance in your savings account: {{accountBalanceSavings}}</span><br>
+                    </a>
+                </div>
+    
+                <div class="form-group col-lg-12 mx-auto mb-0" (click)="createAccount()">
+                    <a class="btn btn-primary btn-block py-2">
+                        <span class="font-weight-bold text-white">Click here to create your new account</span>
+                    </a>
+                </div>
+    
+                <div class="form-group col-lg-12 mx-auto d-flex align-items-center my-4">
+                    <div class="border-bottom w-100 ml-5"></div>
+                    <span class="px-2 small text-muted font-weight-bold text-muted">OR</span>
+                    <div class="border-bottom w-100 mr-5"></div>
+                </div>
+    
+                <div class="text-center w-100">
+                    <p class="text-muted font-weight-bold">Already created? <a routerLink="/registration"
+                            class="text-primary ml-2">Register here for net banking</a></p>
+                </div>
+    
+            </div>
+        </form>
+    </div>
+</div>
+

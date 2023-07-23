@@ -1,0 +1,50 @@
+<div class="container">
+    <div class="card">
+        <form action="">
+            <div>
+                <input class="form-check-input" type="checkbox" id="flexSwitchCheckChecked" [checked]="isChecked" (change)="changed($event)">
+                        <label class="form-check-label" for="flexSwitchCheckChecked">Transfer to self</label>
+            </div>
+            <div class="col-md-12 col-lg-12 ml-auto">
+                <small>Account Number</small>
+                <input [(ngModel)]="transferAccountNumber" id="transferAccountNumber" type="text"
+                                name="transferAccountNumber" placeholder="To Account Number"
+                                class="form-control bg-white border-left-0 border-md" required>
+    
+                <input [(ngModel)]="transferAccountType" id="transferAccountType" type="text"
+                name="transferAccountType" placeholder="To Account Type (Primary/Savings)"
+                class="form-control bg-white border-left-0 border-md" required> 
+                
+                <small>Choose your account type</small>
+                <div>
+                    <div class="form-check">
+                        <input (change)="selectSelfPrimary($event)" class="form-check-input" type="radio" name="selfAccountType" id="selfAccountType">
+                        <label class="form-check-label" for="selfAccountType">
+                            Primary <small>(Balance: ₹ {{primaryBalance}}/-)</small>
+                        </label>
+                    </div>
+    
+                    <div class="form-check">
+                        <input (change)="selectSelfSavings($event)" class="form-check-input" type="radio" name="selfAccountType" id="selfAccountType">
+                        <label class="form-check-label" for="selfAccountType">
+                            Savings <small>(Balance: ₹ {{savingsBalance}}/-)</small>
+                        </label>
+                    </div>
+                </div>
+                <input [(ngModel)]="tranferAmount" id="tranferAmount" type="number" name="tranferAmount"
+                                placeholder="Enter Amount" class="form-control bg-white border-left-0 border-md"
+                                required>
+                
+                <input [(ngModel)]="transferMessage" id="transferMessage" type="text" name="transferMessage"
+                placeholder="Enter Message" class="form-control bg-white border-left-0 border-md"
+                required>
+    
+                <div class="input-group">
+                    <a class="btn btn-success btn-block py-2" (click)="transferMoney()">
+                        <span class="font-weight-bold text-white">Transfer Money</span>
+                    </a>
+                </div>
+        </div>
+        <div>
+        </div>
+

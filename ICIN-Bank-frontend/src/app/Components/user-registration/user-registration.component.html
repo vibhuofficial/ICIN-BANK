@@ -1,0 +1,72 @@
+<div class="container myDiv">
+    <div class="row py-5 align-items-center">
+        <div class="col-md-5 pr-lg-5 mb-5 mb-md-0 text-center">
+            <h1 class="display-3">ICIN Bank</h1>
+        </div>
+
+        <div class="col-md-7 col-lg-6 ml-auto">
+            <form>
+                <div class="row">
+                    <div class="form">
+                        <h1 class="display-4">Register</h1>
+                    </div>
+                    <div class="form-floating mb-3">
+                        <input [(ngModel)]="firstName" id="firstName" type="text" name="firstname" placeholder="First Name" class="form-control bg-white border-left-0 border-md" required>
+                        <label for="firstname">First Name</label>
+                    </div>
+
+                    <div class="form-floating mb-3">
+                        <input [(ngModel)]="lastName" id="lastName" type="text" name="lastname" placeholder="Last Name"
+                            class="form-control bg-white border-left-0 border-md" required>
+                            <label for="lastname">Last Name</label>
+                    </div>
+
+                    <div class="form-floating mb-3">
+                        <input [(ngModel)]="accountNumber" id="accountNumber" type="text" name="accountNumber" placeholder="Account Number"
+                            class="form-control bg-white border-left-0 border-md" required>
+                            <label for="accountNumber">Enter the 9 digit account number provided by your branch representative</label>
+                    </div>
+
+                    <div class="form-group col-lg-12 mb-0" (click)="generateID()">
+                        <a class="btn btn-success btn-block py-2">
+                            <span class="font-weight-bold text-white">Click to obtain your new user ID</span><br>
+                        </a>
+                    </div>
+
+                    <div class="input-group col-lg-12 mb-4">
+                        <input value="{{ loginUserID }}" id="loginUserId" type="text" name="loginUserId" placeholder="Login User ID" readonly
+                            class="form-control bg-white border-left-0 border-md">
+                    </div>
+
+                    <div class="input-group col-lg-6 mb-4">
+                        <input [(ngModel)]="loginUserPassword1" id="password" type="password" name="password" placeholder="Enter a password of your choice"
+                            class="form-control bg-white border-left-0 border-md" required>
+                    </div>
+
+                    <div class="input-group col-lg-6 mb-4">
+                        <input  [(ngModel)]="loginUserPassword2" id="passwordConfirmation" type="password" name="passwordConfirmation"
+                            placeholder="Re-enter the password" class="form-control bg-white border-left-0 border-md" required>
+                    </div>
+
+                    <div class="form-group col-lg-12 mx-auto mb-0" (click)="register()">
+                        <a class="btn btn-primary btn-block py-2">
+                            <span class="font-weight-bold text-white">Register Your Account For Net Banking</span>
+                        </a>
+                    </div>
+
+                    <div class="form-group col-lg-12 mx-auto d-flex align-items-center my-4">
+                        <div class="border-bottom w-100 ml-5"></div>
+                        <span class="px-2 small text-muted font-weight-bold text-muted">OR</span>
+                        <div class="border-bottom w-100 mr-5"></div>
+                    </div>
+
+                    <div class="text-center w-100">
+                        <p class="text-muted font-weight-bold">Already Registered? <a routerLink=""
+                                class="text-primary ml-2">Login</a></p>
+                    </div>
+
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

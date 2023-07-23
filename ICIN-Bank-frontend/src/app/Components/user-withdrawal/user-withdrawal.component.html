@@ -1,0 +1,42 @@
+<div class="container">
+    <div class="card">
+        <form action="">
+            <div class="col-md-12 col-lg-12 ml-auto">
+                <small>Account Number</small>
+                <input [(ngModel)]="depositAccountNumber" id="accountNumber" type="text"
+                                name="accountNumber" placeholder="Confirm your account number to withdraw money"
+                                class="form-control bg-white border-left-0 border-md" required>
+                <div>
+                        <label class="form-check-label" for="primary">
+                            Primary <small>(Balance: ₹ {{primaryBalance}}/-)</small>
+                        </label>
+                    </div>
+
+                    <input [(ngModel)]="primaryWithdrawalAmount" id="primaryWithdrawalAmount" type="number" name="primaryWithdrawalAmount"
+                                placeholder="Enter amount to be withdrawn" class="form-control bg-white border-left-0 border-md"
+                                required>
+
+                    <div class="input-group">
+                        <a class="btn btn-success btn-block py-2" (click)="withDrawMoneyfromPrimary()">
+                            <span class="font-weight-bold text-white">Withdraw money from Primary Account</span>
+                        </a>
+                    </div>
+    
+                    <div class="form-check">
+                        <label class="form-check-label" for="savings">
+                            Savings <small>(Balance: ₹ {{savingsBalance}}/-)</small>
+                        </label>
+                    </div>
+                </div>
+                <input [(ngModel)]="savingsWithdrawalAmount" id="savingsWithdrawalAmount" type="number" name="savingsWithdrawalAmount"
+                                placeholder="Enter amount to be withdrawn" class="form-control bg-white border-left-0 border-md"
+                                required>
+    
+                <div class="input-group">
+                    <a class="btn btn-success btn-block py-2" (click)="withdrawMoneyfromSavings()">
+                        <span class="font-weight-bold text-white">Withdraw money from Savings Account</span>
+                    </a>
+                </div>
+        <div>
+        </div>
+
